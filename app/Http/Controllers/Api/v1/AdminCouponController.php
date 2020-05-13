@@ -49,9 +49,12 @@ class AdminCouponController  extends Controller
 
             'code'=>'required',
             'discount'=>'required',
+            'usage'=>'required',
             'value'=>'required|numeric',
             'start_date'=>'required|date',
             'end_date'=>'required|date',
+            'counter'=>'integer|numeric',
+            'max_counter'=>'integer|numeric',
             'user_id'=>'required|integer',
         ]);
        
@@ -87,6 +90,8 @@ class AdminCouponController  extends Controller
             'value'=>'numeric',
             'start_date'=>'date',
             'end_date'=>'date',
+            'counter'=>'integer|numeric',
+            'max_counter'=>'integer|numeric',
             'user_id'=>'integer',
         ]);
 

@@ -15,7 +15,8 @@ class AdminCoupon extends Model
      * @var array
      */
     protected $fillable = [
-        'code','discount','value','start_date','end_date','remaining_days','user_id',
+        'code','discount','value','start_date','end_date','counter','max_counter',
+        'remaining_days','usage','user_id',
     ];
 
     public function getRemainingDaysAttribute()

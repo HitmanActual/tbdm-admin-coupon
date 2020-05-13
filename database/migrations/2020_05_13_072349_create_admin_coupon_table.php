@@ -21,6 +21,9 @@ class CreateAdminCouponTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->integer('remaining_days')->default(0);
+            $table->enum('usage',['single','multiple']);
+            $table->integer('counter')->unsigned()->default(0);
+            $table->integer('max_counter')->unsigned()->default(0);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
