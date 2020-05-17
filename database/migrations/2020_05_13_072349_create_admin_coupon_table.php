@@ -26,6 +26,7 @@ class CreateAdminCouponTable extends Migration
             $table->integer('max_counter')->unsigned()->default(0);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 
